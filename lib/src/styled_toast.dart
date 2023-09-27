@@ -264,7 +264,8 @@ ToastFuture showToastWidget(
 
   future = ToastFuture.create(duration, entry, onDismiss, key);
 
-  Overlay.of(context).insert(entry);
+  //Overlay.of(context).insert(entry);
+  Overlay.of(context,rootOverlay: true).insert(entry);
   ToastManager().addFuture(future);
 
   return future;
